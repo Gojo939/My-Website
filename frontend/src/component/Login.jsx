@@ -10,10 +10,10 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:2468/users/login", { email,password,});
-            // const token = res.data;
-            // console.log(token)
-            // localStorage.setItem("token", token);
+            const res = await axios.post("https://my-website-7hcq.onrender.com/users/login", { email,password,});
+            const token = res.data;
+           
+            localStorage.setItem("token", token);
             setSuccessful("User logged in successfully");
         } catch (err) {
             console.error(err.message);

@@ -12,7 +12,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:2468/users/create", { username,email,age,password,});
+            await axios.post("https://my-website-7hcq.onrender.com/users/create", { username,email,age,password,});
             setSuccessful("User sign up successfully");
         } catch (err) {
             console.error(err.message);

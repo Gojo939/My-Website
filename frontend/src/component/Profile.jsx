@@ -10,7 +10,7 @@ function Profile () {
 
     useEffect(() => {
         const getUser = async() => {
-            const res = await axios.get(`http://localhost:2468/users/${userId}`, {
+            const res = await axios.get(`https://my-website-7hcq.onrender.com/users/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -23,7 +23,7 @@ function Profile () {
     return(
     <div>
         <h1>Barry's Profile</h1>
-        <p><b>Name: {currentUser.name}</b></p>
+        <p><b>Name: {currentUser.username}</b></p>
         <p><b>Age: {currentUser.age}</b></p>
         <p><b>Email: {currentUser.email}</b></p>
     </div>
